@@ -1,8 +1,44 @@
-html, body {
-  margin: 0;
-  padding: 0;
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #121212; 
 }
 
-canvas {
-  display: block;
+#controls {
+    position: absolute;
+    top: 10px;
+    right: 12px; 
+    padding: 10px;
+    background: rgba(30, 30, 30, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none; /* Non serve più se il pulsante è esterno */
+}
+
+/* Stile per il nuovo contenitore del pulsante sotto la mappa */
+#resetButtonContainer {
+    position: absolute;
+    z-index: 1000;
+}
+
+#resetButtonContainer button {
+    padding: 8px 12px;
+    background-color: #333333;
+    color: white;
+    border: 1px solid #555555;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Stile per il testo di stato del paese */
+.highlight-country {
+    color: #FFD700; /* Oro visibile */
+    font-weight: bold;
 }

@@ -1,18 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Sketch</title>
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    <script src="libraries/p5.min.js"></script>
-    <script src="libraries/p5.sound.min.js"></script>
-  </head>
-
-  <body>
+    <title>Visualizzazione Vulcani</title>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
     <script src="sketch.js"></script>
-  </body>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        /* Stili per evitare scrollbar e allineare lo sfondo */
+        body {
+            margin: 0;
+            overflow: hidden; 
+            background-color: #121212;
+        }
+        
+        /* Contenitori per i controlli in modo che siano sempre sopra il canvas */
+        #controls, #resetButtonContainer {
+            position: absolute;
+            z-index: 1000;
+        }
+        
+        /* Nascondi il select pre-esistente nel DOM (sarà controllato da p5.js) */
+        #countrySelect {
+            display: none !important; 
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="controls">
+        <div id="countrySelectContainer"></div>
+    </div>
+    
+    <div id="resetButtonContainer"></div> 
+    
+</body>
 </html>
